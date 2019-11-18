@@ -1,0 +1,12 @@
+{
+	"coffees": [
+		{
+			"id": "0",
+			"name": "Espresso"
+		},
+		{
+			"id": "1",
+			"name": "Flat White"
+		}
+	]
+}
