@@ -2,6 +2,12 @@
 
 import SwiftUI
 
+let coffeesTabString: LocalizedStringKey = "Coffees"
+let aboutTabString: LocalizedStringKey = "About"
+
+// as this next one should NOT ship, there should be unit test that the value is not the key
+let aboutTextString: LocalizedStringKey = "About the CoffeeKit content"
+
 struct ContentView: View {
     let coffees: [Coffee]
 
@@ -14,12 +20,12 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "0.circle")
-                Text("Coffees")
+                Text(coffeesTabString)
             }
-            Text("Hello World")
+            Text(aboutTextString)
                 .tabItem {
                     Image(systemName: "0.square")
-                    Text("About")
+                    Text(aboutTabString)
             }
         }
     }

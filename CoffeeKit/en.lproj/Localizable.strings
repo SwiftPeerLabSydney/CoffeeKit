@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CoffeeKit
+
+  Created by Neil Cossor on 16/11/19.
+  Copyright © 2019 SwiftPeerLabSydney. All rights reserved.
+ 
+  English version of keywords for Swift LocalizedStringKey version of NSLocalizedString
+*/
+
+"Coffees" = "Coffees";  // not required, as key = value if not specified
+"About the CoffeeKit content" = "some stuff about The Swift Peer Labs (Sydney) CoffeeKit app";
