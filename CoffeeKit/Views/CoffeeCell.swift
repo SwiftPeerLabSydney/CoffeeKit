@@ -8,7 +8,7 @@ struct CoffeeCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(coffee.name)
+              Text(NSLocalizedString(coffee.name, comment: "must have key:value to match data.json"))
                     .font(.headline)
             }
             Spacer(minLength: 8)

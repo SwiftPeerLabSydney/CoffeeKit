@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  CoffeeKit
+
+  Created by Neil Cossor on 16/11/19.
+  Translations by YoungHoon Ha
+  Copyright © 2019 SwiftPeerLabSydney. All rights reserved.
+ 
+  Korean version of keywords for Swift LocalizedStringKey version of NSLocalizedString
+*/
+
+"Coffees" = "커피";
+"About" = "정보";
+"About the CoffeeKit content" = "CoffeeKit 컨텐츠 정보";
+
+// table entries for each coffee type, must match up with name field in data.json
+// note, case sensitive on key
+"Espresso" = "에소프레소 (Espresso)";
+"Flat White" = "플렛 화이트 (Flat white)";
