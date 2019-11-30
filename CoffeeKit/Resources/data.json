@@ -2,11 +2,185 @@
 	"coffees": [
 		{
 			"id": "0",
-			"name": "Espresso"
+			"name": "Machine Espresso",
+			"grind": "medium",
+			"ingredients": [
+				{
+					"beans": 30
+				},
+				{
+					"water": 100
+				},
+				{
+					"sugar": 100
+				}
+			],
+			"equipment": [
+				{
+					"filter": null
+				},
+				{
+					"machine": "type"
+				},
+				{
+					"tamper": true
+				}
+			], 
+			"steps": [
+				{
+					"imageUrl": "https://placekitten.com/200/200",
+					"instruction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui libero, viverra non est euismod, porta suscipit neque. Morbi non elementum ipsum. Donec quis lectus pharetra, pretium dui eu, porttitor turpis. Etiam sed erat orci. Praesent blandit metus vel porttitor venenatis. Donec pharetra consectetur sodales. In eget metus justo. Praesent eu vehicula dui. Nulla sed cursus odio. Suspendisse pulvinar tellus vel consectetur dictum. Morbi scelerisque faucibus orci in varius. Cras eu orci eu arcu mattis sagittis. Aliquam sit amet ipsum eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse et elit et sapien ultricies lobortis.",
+					"duration": "120",
+					"resourceUrl": "https://www.youtube.com/watch?v=A8MFlzT07SU"
+				},
+				{
+					"imageUrl": "https://placekitten.com/200/200",
+					"instruction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui libero, viverra non est euismod, porta suscipit neque. Morbi non elementum ipsum. Donec quis lectus pharetra, pretium dui eu, porttitor turpis. Etiam sed erat orci. Praesent blandit metus vel porttitor venenatis. Donec pharetra consectetur sodales. In eget metus justo. Praesent eu vehicula dui. Nulla sed cursus odio. Suspendisse pulvinar tellus vel consectetur dictum. Morbi scelerisque faucibus orci in varius. Cras eu orci eu arcu mattis sagittis. Aliquam sit amet ipsum eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse et elit et sapien ultricies lobortis.",
+					"duration": "120",
+					"resourceUrl": "https://www.youtube.com/watch?v=A8MFlzT07SU"
+				}
+
+			]
 		},
 		{
 			"id": "1",
-			"name": "Flat White"
+			"name": "Moka Espresso",
+			"grind": "medium",
+			"ingredients": [
+				{
+					"beans": 30
+				},
+				{
+					"water": 100
+				},
+				{
+					"sugar": 100
+				}
+			],
+			"equipment": [
+				{
+					"filter": null
+				},
+				{
+					"machine": "type"
+				},
+				{
+					"tamper": true
+				}
+			], 
+			"steps": [
+				{
+					"imageUrl": "",
+					"instruction": "",
+					"duration": "number of seconds",
+					"resourceUrl": ""
+				}
+			]
+		},
+		{
+			"id": "2",
+			"name": "Plunger",
+			"grind": "medium",
+			"ingredients": [
+				{
+					"beans": 30
+				},
+				{
+					"water": 100
+				},
+				{
+					"sugar": 100
+				}
+			],
+			"equipment": [
+				{
+					"filter": null
+				},
+				{
+					"machine": "type"
+				},
+				{
+					"tamper": false
+				}
+			], 
+			"steps": [
+				{
+					"imageUrl": "",
+					"instruction": "",
+					"duration": "number of seconds",
+					"resourceUrl": ""
+				}
+			]
+		},
+		{
+			"id": "3",
+			"name": "Pour Over",
+			"grind": "medium",
+			"ingredients": [
+				{
+					"beans": 30
+				},
+				{
+					"water": 100
+				},
+				{
+					"sugar": 100
+				}
+			],
+			"equipment": [
+				{
+					"filter": null
+				},
+				{
+					"machine": "type"
+				},
+				{
+					"tamper": false
+				}
+			], 
+			"steps": [
+				{
+					"imageUrl": "",
+					"instruction": "",
+					"duration": "number of seconds",
+					"resourceUrl": ""
+				}
+			]
+		},
+		{
+			"id": "4",
+			"name": "Turkish Coffee",
+			"grind": "medium",
+			"ingredients": [
+				{
+					"beans": 30
+				},
+				{
+					"water": 100
+				},
+				{
+					"sugar": 100
+				}
+			],
+			"equipment": [
+				{
+					"filter": null
+				},
+				{
+					"machine": "type"
+				},
+				{
+					"tamper": false
+				}
+			], 
+			"steps": [
+				{
+					"imageUrl": "",
+					"instruction": "",
+					"duration": "number of seconds",
+					"resourceUrl": ""
+				}
+			]
 		}
 	]
 }
