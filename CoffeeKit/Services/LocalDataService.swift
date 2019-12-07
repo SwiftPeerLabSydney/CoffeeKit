@@ -13,6 +13,7 @@ struct LocalDataService {
             let response = try JSONDecoder().decode(CoffeeResponse.self, from: data)
             return response.coffees
         } catch {
+            print("Error: \(error.localizedDescription)")
             return nil
         }
     }
