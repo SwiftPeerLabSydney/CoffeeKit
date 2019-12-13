@@ -17,7 +17,6 @@
 		158467AF235A99A800D0DAF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158467AE235A99A800D0DAF6 /* ContentView.swift */; };
 		158467B1235A99AC00D0DAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B0235A99AC00D0DAF6 /* Assets.xcassets */; };
 		158467B4235A99AC00D0DAF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B3235A99AC00D0DAF6 /* Preview Assets.xcassets */; };
-		158467B6235A99AC00D0DAF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158467C2235A99AC00D0DAF6 /* CoffeeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */; };
 		2CD8356E2388B63A003B9F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD835702388B63A003B9F6F /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -44,6 +43,7 @@
 		158467AE235A99A800D0DAF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		158467B0235A99AC00D0DAF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		158467B3235A99AC00D0DAF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		158467B6235A99AC00D0DAF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158467B8235A99AC00D0DAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		158467BD235A99AC00D0DAF6 /* CoffeeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeKitTests.swift; sourceTree = "<group>"; };
@@ -175,6 +175,7 @@
 				158467A3235A99A800D0DAF6 /* Sources */,
 				158467A4235A99A800D0DAF6 /* Frameworks */,
 				158467A5235A99A800D0DAF6 /* Resources */,
+				033511D123A4571600CCCC51 /* Run Script (SwiftLint) */,
 			);
 			buildRules = (
 			);
@@ -247,7 +248,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				158467B7235A99AC00D0DAF6 /* LaunchScreen.storyboard in Resources */,
 				2CD8356E2388B63A003B9F6F /* Localizable.strings in Resources */,
 				158467B4235A99AC00D0DAF6 /* Preview Assets.xcassets in Resources */,
 				158467B1235A99AC00D0DAF6 /* Assets.xcassets in Resources */,
@@ -263,6 +263,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		033511D123A4571600CCCC51 /* Run Script (SwiftLint) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (SwiftLint)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint_version=`swiftlint version`\n  if [ \"$swiftlint_version\" == \"0.38.0\" ]; then\n    swiftlint\n  else\n    echo \"warning: SwiftLint is not the expected version\"\n  fi\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		158467A3235A99A800D0DAF6 /* Sources */ = {
@@ -299,14 +320,13 @@
 
 /* Begin PBXVariantGroup section */
 		158467B5235A99AC00D0DAF6 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
+			isa = PBXVariantGroup;
+			children = (
 				158467B6235A99AC00D0DAF6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
-        };
-
+		};
 		2CD835702388B63A003B9F6F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

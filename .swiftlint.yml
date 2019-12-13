@@ -1,0 +1,7 @@
+disabled_rules: 
+  - block_based_kvo
+  - identifier_name
+  - line_length
+  - trailing_comma
+  - trailing_whitespace
+  - void_return
