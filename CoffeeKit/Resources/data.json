@@ -3,41 +3,43 @@
 		{
 			"id": "0",
 			"name": "Machine Espresso",
-			"grind": "medium",
+			"grind": "fine",
 			"ingredients": [
 				{
-					"beans": 30
+                    "name": "beans",
+                    "quantity": 30.0,
+                    "metric": "grams"
 				},
 				{
-					"water": 100
+                    "name": "water",
+                    "quantity": 40.0,
+                    "metric": "grams"
 				},
 				{
-					"sugar": 100
+                    "name": "sugar",
+                    "quantity": 50.0,
+                    "metric": "grams"
 				}
 			],
-			"equipment": [
-				{
-					"filter": null
-				},
-				{
-					"machine": "type"
-				},
-				{
-					"tamper": true
-				}
-			], 
+            "equipment": {
+                "filter": null,
+                "machine": "Espresso machine",
+                "tamper": true,
+            },
 			"steps": [
 				{
-					"imageUrl": "https://placekitten.com/200/200",
+                    "order": 0,
+					"imageUrlString": "https://placekitten.com/200/200",
 					"instruction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui libero, viverra non est euismod, porta suscipit neque. Morbi non elementum ipsum. Donec quis lectus pharetra, pretium dui eu, porttitor turpis. Etiam sed erat orci. Praesent blandit metus vel porttitor venenatis. Donec pharetra consectetur sodales. In eget metus justo. Praesent eu vehicula dui. Nulla sed cursus odio. Suspendisse pulvinar tellus vel consectetur dictum. Morbi scelerisque faucibus orci in varius. Cras eu orci eu arcu mattis sagittis. Aliquam sit amet ipsum eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse et elit et sapien ultricies lobortis.",
-					"duration": "120",
-					"resourceUrl": "https://www.youtube.com/watch?v=A8MFlzT07SU"
+					"duration": 120.0,
+					"resourceUrlString": "https://www.youtube.com/watch?v=A8MFlzT07SU",
 				},
 				{
-					"imageUrl": "https://placekitten.com/200/200",
+                    "order": 1,
+					"imageUrlString": "https://placekitten.com/200/200",
 					"instruction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui libero, viverra non est euismod, porta suscipit neque. Morbi non elementum ipsum. Donec quis lectus pharetra, pretium dui eu, porttitor turpis. Etiam sed erat orci. Praesent blandit metus vel porttitor venenatis. Donec pharetra consectetur sodales. In eget metus justo. Praesent eu vehicula dui. Nulla sed cursus odio. Suspendisse pulvinar tellus vel consectetur dictum. Morbi scelerisque faucibus orci in varius. Cras eu orci eu arcu mattis sagittis. Aliquam sit amet ipsum eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse et elit et sapien ultricies lobortis.",
-					"duration": "120",
-					"resourceUrl": "https://www.youtube.com/watch?v=A8MFlzT07SU"
+					"duration": 120.0,
+					"resourceUrlString": "https://www.youtube.com/watch?v=A8MFlzT07SU"
 				}
 
 			]
@@ -45,70 +47,72 @@
 		{
 			"id": "1",
 			"name": "Moka Espresso",
-			"grind": "medium",
+			"grind": "fine",
 			"ingredients": [
 				{
-					"beans": 30
-				},
-				{
-					"water": 100
-				},
-				{
-					"sugar": 100
-				}
+                    "name": "beans",
+                    "quantity": 60.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "water",
+                    "quantity": 70.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 80.0,
+                    "metric": "grams"
+                }
 			],
-			"equipment": [
-				{
-					"filter": null
-				},
-				{
-					"machine": "type"
-				},
-				{
-					"tamper": true
-				}
-			], 
+			"equipment": {
+                "filter": null,
+                "machine": "type",
+                "tamper": true,
+            },
 			"steps": [
 				{
-					"imageUrl": "",
+                    "order": 0,
+					"imageUrlString": "",
 					"instruction": "",
-					"duration": "number of seconds",
-					"resourceUrl": ""
+					"duration": 120.0,
+					"resourceUrlString": ""
 				}
 			]
 		},
 		{
 			"id": "2",
 			"name": "Plunger",
-			"grind": "medium",
+			"grind": "coarse",
 			"ingredients": [
 				{
-					"beans": 30
-				},
-				{
-					"water": 100
-				},
-				{
-					"sugar": 100
-				}
+                    "name": "beans",
+                    "quantity": 90.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "water",
+                    "quantity": 100.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 110.0,
+                    "metric": "grams"
+                }
 			],
-			"equipment": [
-				{
-					"filter": null
-				},
-				{
-					"machine": "type"
-				},
-				{
-					"tamper": false
-				}
-			], 
+            "equipment": {
+                "filter": null,
+                "machine": "Plunger",
+                "tamper": false,
+            },
 			"steps": [
 				{
-					"imageUrl": "",
+                    "order": 0,
+					"imageUrlString": "",
 					"instruction": "",
-					"duration": "number of seconds",
-					"resourceUrl": ""
+					"duration": 120.0,
+					"resourceUrlString": ""
 				}
 			]
 		},
@@ -118,67 +122,69 @@
 			"grind": "medium",
 			"ingredients": [
 				{
-					"beans": 30
-				},
-				{
-					"water": 100
-				},
-				{
-					"sugar": 100
-				}
+                    "name": "beans",
+                    "quantity": 120.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "water",
+                    "quantity": 130.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 140.0,
+                    "metric": "grams"
+                }
 			],
-			"equipment": [
-				{
-					"filter": null
-				},
-				{
-					"machine": "type"
-				},
-				{
-					"tamper": false
-				}
-			], 
+            "equipment": {
+                "filter": "Cone filter (paper or reusable)",
+                "machine": "Hario V60",
+                "tamper": false,
+            },
 			"steps": [
 				{
-					"imageUrl": "",
+                    "order": 0,
+					"imageUrlString": null,
 					"instruction": "",
-					"duration": "number of seconds",
-					"resourceUrl": ""
+					"duration": 120.0,
+					"resourceUrlString": null
 				}
 			]
 		},
 		{
 			"id": "4",
 			"name": "Turkish Coffee",
-			"grind": "medium",
+			"grind": "extraFine",
 			"ingredients": [
 				{
-					"beans": 30
-				},
-				{
-					"water": 100
-				},
-				{
-					"sugar": 100
-				}
+                    "name": "beans",
+                    "quantity": 150.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "water",
+                    "quantity": 160.0,
+                    "metric": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 170.0,
+                    "metric": "grams"
+                }
 			],
-			"equipment": [
-				{
-					"filter": null
-				},
-				{
-					"machine": "type"
-				},
-				{
-					"tamper": false
-				}
-			], 
+            "equipment": {
+                "filter": null,
+                "machine": "Turkish coffee maker?",
+                "tamper": false,
+            },
 			"steps": [
 				{
-					"imageUrl": "",
+                    "order": 0,
+					"imageUrlString": "",
 					"instruction": "",
-					"duration": "number of seconds",
-					"resourceUrl": ""
+					"duration": 120.0,
+					"resourceUrlString": ""
 				}
 			]
 		}

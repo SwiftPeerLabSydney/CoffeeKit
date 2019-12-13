@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0318D9C8239B431000643730 /* Grind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318D9C7239B431000643730 /* Grind.swift */; };
+		0318D9CA239B46F100643730 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318D9C9239B46F100643730 /* Ingredient.swift */; };
+		0318D9CC239B4A3900643730 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318D9CB239B4A3900643730 /* Equipment.swift */; };
+		0318D9CE239B4BC500643730 /* PreparationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318D9CD239B4BC500643730 /* PreparationStep.swift */; };
 		035B0754237F9034004287DB /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 035B0753237F9034004287DB /* data.json */; };
 		035B0756237F904F004287DB /* CoffeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B0755237F904F004287DB /* CoffeeCell.swift */; };
 		035B0759237F91E9004287DB /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B0758237F91E9004287DB /* Coffee.swift */; };
@@ -17,7 +21,6 @@
 		158467AF235A99A800D0DAF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158467AE235A99A800D0DAF6 /* ContentView.swift */; };
 		158467B1235A99AC00D0DAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B0235A99AC00D0DAF6 /* Assets.xcassets */; };
 		158467B4235A99AC00D0DAF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B3235A99AC00D0DAF6 /* Preview Assets.xcassets */; };
-		158467B6235A99AC00D0DAF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158467C2235A99AC00D0DAF6 /* CoffeeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */; };
 		2CD8356E2388B63A003B9F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD835702388B63A003B9F6F /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -33,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0318D9C7239B431000643730 /* Grind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grind.swift; sourceTree = "<group>"; };
+		0318D9C9239B46F100643730 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		0318D9CB239B4A3900643730 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		0318D9CD239B4BC500643730 /* PreparationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationStep.swift; sourceTree = "<group>"; };
 		035B0753237F9034004287DB /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		035B0755237F904F004287DB /* CoffeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCell.swift; sourceTree = "<group>"; };
 		035B0758237F91E9004287DB /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 		158467AE235A99A800D0DAF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		158467B0235A99AC00D0DAF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		158467B3235A99AC00D0DAF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		158467B6235A99AC00D0DAF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158467B8235A99AC00D0DAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		158467BD235A99AC00D0DAF6 /* CoffeeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeKitTests.swift; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 			children = (
 				035B0758237F91E9004287DB /* Coffee.swift */,
 				035B075A237F9549004287DB /* CoffeeResponse.swift */,
+				0318D9CB239B4A3900643730 /* Equipment.swift */,
+				0318D9C7239B431000643730 /* Grind.swift */,
+				0318D9C9239B46F100643730 /* Ingredient.swift */,
+				0318D9CD239B4BC500643730 /* PreparationStep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +187,7 @@
 				158467A3235A99A800D0DAF6 /* Sources */,
 				158467A4235A99A800D0DAF6 /* Frameworks */,
 				158467A5235A99A800D0DAF6 /* Resources */,
+				033511D223A4664400CCCC51 /* Run Script (SwiftLint) */,
 			);
 			buildRules = (
 			);
@@ -247,7 +260,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				158467B7235A99AC00D0DAF6 /* LaunchScreen.storyboard in Resources */,
 				2CD8356E2388B63A003B9F6F /* Localizable.strings in Resources */,
 				158467B4235A99AC00D0DAF6 /* Preview Assets.xcassets in Resources */,
 				158467B1235A99AC00D0DAF6 /* Assets.xcassets in Resources */,
@@ -264,6 +276,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		033511D223A4664400CCCC51 /* Run Script (SwiftLint) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (SwiftLint)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\n\n# swift package update\n\nswift run -c release swiftlint --config \"../.swiftlint.yaml\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		158467A3235A99A800D0DAF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -271,6 +304,10 @@
 			files = (
 				158467AB235A99A800D0DAF6 /* AppDelegate.swift in Sources */,
 				158467AD235A99A800D0DAF6 /* SceneDelegate.swift in Sources */,
+				0318D9CA239B46F100643730 /* Ingredient.swift in Sources */,
+				0318D9CE239B4BC500643730 /* PreparationStep.swift in Sources */,
+				0318D9C8239B431000643730 /* Grind.swift in Sources */,
+				0318D9CC239B4A3900643730 /* Equipment.swift in Sources */,
 				158467AF235A99A800D0DAF6 /* ContentView.swift in Sources */,
 				035B0756237F904F004287DB /* CoffeeCell.swift in Sources */,
 				035B075B237F9549004287DB /* CoffeeResponse.swift in Sources */,
@@ -299,14 +336,13 @@
 
 /* Begin PBXVariantGroup section */
 		158467B5235A99AC00D0DAF6 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
+			isa = PBXVariantGroup;
+			children = (
 				158467B6235A99AC00D0DAF6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
-        };
-
+		};
 		2CD835702388B63A003B9F6F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
