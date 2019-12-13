@@ -5,6 +5,18 @@ import Foundation
 struct Coffee: Codable {
     let id: String
     let name: String
+    let grind: Grind
+    let ingredients: [Ingredient]
+    let equipment: Equipment
+    let steps: [PreparationStep]
 }
 
-extension Coffee: Hashable {}
+extension Coffee: Hashable {
+    static func == (lhs: Coffee, rhs: Coffee) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
