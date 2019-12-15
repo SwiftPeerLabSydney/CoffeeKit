@@ -187,6 +187,7 @@
 				158467A3235A99A800D0DAF6 /* Sources */,
 				158467A4235A99A800D0DAF6 /* Frameworks */,
 				158467A5235A99A800D0DAF6 /* Resources */,
+				033511D223A4664400CCCC51 /* Run Script (SwiftLint) */,
 			);
 			buildRules = (
 			);
@@ -274,6 +275,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		033511D223A4664400CCCC51 /* Run Script (SwiftLint) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (SwiftLint)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\n\n# swift package update\n\nswift run -c release swiftlint --config \"../.swiftlint.yaml\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		158467A3235A99A800D0DAF6 /* Sources */ = {
