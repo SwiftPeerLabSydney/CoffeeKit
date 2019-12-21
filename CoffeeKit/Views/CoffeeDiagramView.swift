@@ -169,7 +169,7 @@ let milk = CoffeeIngredient(name: "MILK", color: Color(red: 231/255, green: 228/
 let coffee = CoffeeIngredient(name: "COFFEE", color: Color(red: 233/255, green: 202/225, blue: 146/255))
 
 //====================
-// Coffee Contentsgr
+// Coffee Contents
 //====================
 var espressoContent: [CoffeeContent] = [CoffeeContent(ingredient: espresso, percent: 0.3)]
 
