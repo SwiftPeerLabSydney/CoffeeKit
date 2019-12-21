@@ -23,6 +23,8 @@
 		158467B4235A99AC00D0DAF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B3235A99AC00D0DAF6 /* Preview Assets.xcassets */; };
 		158467C2235A99AC00D0DAF6 /* CoffeeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */; };
 		2CD8356E2388B63A003B9F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD835702388B63A003B9F6F /* Localizable.strings */; };
+		7F98AC0823AD9647006A2365 /* CoffeeDiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98AC0723AD9647006A2365 /* CoffeeDiagramView.swift */; };
+		7F98AC0A23AD98B0006A2365 /* CoffeeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98AC0923AD98B0006A2365 /* CoffeeGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		158467C3235A99AC00D0DAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD8356F2388B63A003B9F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CD835712388B641003B9F6F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F98AC0723AD9647006A2365 /* CoffeeDiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDiagramView.swift; sourceTree = "<group>"; };
+		7F98AC0923AD98B0006A2365 /* CoffeeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				158467AE235A99A800D0DAF6 /* ContentView.swift */,
 				035B0755237F904F004287DB /* CoffeeCell.swift */,
+				7F98AC0723AD9647006A2365 /* CoffeeDiagramView.swift */,
+				7F98AC0923AD98B0006A2365 /* CoffeeGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			files = (
 				158467AB235A99A800D0DAF6 /* AppDelegate.swift in Sources */,
 				158467AD235A99A800D0DAF6 /* SceneDelegate.swift in Sources */,
+				7F98AC0823AD9647006A2365 /* CoffeeDiagramView.swift in Sources */,
 				0318D9CA239B46F100643730 /* Ingredient.swift in Sources */,
 				0318D9CE239B4BC500643730 /* PreparationStep.swift in Sources */,
 				0318D9C8239B431000643730 /* Grind.swift in Sources */,
@@ -313,6 +320,7 @@
 				035B075B237F9549004287DB /* CoffeeResponse.swift in Sources */,
 				035B075E237F9640004287DB /* LocalDataService.swift in Sources */,
 				035B0759237F91E9004287DB /* Coffee.swift in Sources */,
+				7F98AC0A23AD98B0006A2365 /* CoffeeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
