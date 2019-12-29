@@ -14,6 +14,11 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
+            CoffeeGridView()
+                .tabItem {
+                    Image(systemName: "0.square")
+                    Text(contentTabString)
+            }
             List {
                 ForEach(coffees, id: \.self ) { coffee in
                     CoffeeCell(coffee: coffee)
@@ -22,11 +27,6 @@ struct ContentView: View {
             .tabItem {
                 Image(systemName: "0.circle")
                 Text(coffeesTabString)
-            }
-            CoffeeGridView()
-                .tabItem {
-                    Image(systemName: "0.square")
-                    Text(contentTabString)
             }
             Text(aboutTextString)
                 .tabItem {

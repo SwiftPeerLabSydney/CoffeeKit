@@ -21,13 +21,35 @@ struct CoffeeDiagramView: View {
     
     let labelColor: Color = Color(red: 66/255, green: 42/255, blue: 26/255)
     
+    let steamSizeRate: CGFloat = 0.2
+    let coasterSizeRate: CGFloat = 0.07
+    let titleAreaSizeRate: CGFloat = 0.2
+    
     let handleSizeRate: CGFloat = 0.15
-    let safeHorizontalPaddingRate: CGFloat = 0.05
     
     //====================
     // Variables
     //====================
+    var title: String
     var contents: [CoffeeContent]
+    
+    //==============================
+    // Rect for content and margin
+    //==============================
+    struct Rect: Shape {
+        func path(in rect: CGRect) -> Path {
+            var path = Path()
+            
+            path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+            path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+            
+            path.closeSubpath()
+            
+            return path
+        }
+    }
     
     //====================
     // Cup
@@ -62,21 +84,6 @@ struct CoffeeDiagramView: View {
         }
     }
     
-    struct Content: Shape {
-        func path(in rect: CGRect) -> Path {
-            var path = Path()
-            
-            path.move(to: CGPoint(x: rect.minX, y: rect.minY))
-            path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
-            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-            path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-            
-            path.closeSubpath()
-            
-            return path
-        }
-    }
-    
     //====================
     // Handle
     //====================
@@ -97,13 +104,123 @@ struct CoffeeDiagramView: View {
         }
     }
     
+    //====================
+    // Coaster
+    //====================
+    struct Coaster: Shape {
+        func path(in rect: CGRect) -> Path {
+            let bottomRadius: CGFloat = min(rect.width, rect.height)
+            var path = Path()
+
+            //Top Line
+            path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+            
+            //Right Bottom Arc
+            path.addArc(center: CGPoint(x: rect.maxX - bottomRadius, y: rect.maxY - bottomRadius),
+                        radius: bottomRadius,
+                    startAngle: .degrees(0),
+                      endAngle: .degrees(90),
+                     clockwise: false)
+            
+            //Left Bottom Arc
+            path.addArc(center: CGPoint(x: rect.minX + bottomRadius, y: rect.maxY - bottomRadius),
+                        radius: bottomRadius,
+                        startAngle: .degrees(90),
+                        endAngle: .degrees(180),
+                        clockwise: false)
+            
+            //Left Line
+            path.closeSubpath()
+            
+            return path
+        }
+    }
+    
+    //==============================
+    // Steam
+    //==============================
+    struct Steam: Shape {
+        func path(in rect: CGRect) -> Path {
+            var path = Path()
+            
+            path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+            path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+            
+            path.closeSubpath()
+            
+            return path
+        }
+    }
+    
+    //===================================
+    // Animation
+    //-----------------------------------
+    // <#Need to solve the rotation issue#>
+    //===================================
+    @State private var animationFinished = false
+    
+    func contentAnimation(dealy: Double) -> Animation {
+        return Animation.spring(dampingFraction: 1)
+            .speed(1.5)
+            .delay(dealy * 0.5)
+    }
+    
+    //========================================
+    // View Body
+    //----------------------------------------
+    // swiftlint:disable function_body_length
+    //========================================
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
+        GeometryReader { proxy in
+            self.useProxy(proxy)
+        }
+        .onAppear {
+            //UIView.animate
+            self.animationFinished.toggle()
+        }
+    }
+
+    func useProxy(_ proxy: GeometryProxy) -> some View {
+        let handleSize = proxy.size.height * self.handleSizeRate
+        
+        let steamWidth = proxy.size.width / 3
+        let steamHeight = proxy.size.height * self.steamSizeRate
+        
+        let coasterWidth = proxy.size.width
+        let coasterHeight = proxy.size.height * self.coasterSizeRate
+        
+        let titleAreaWidth = proxy.size.width
+        let titleAreaHeight = proxy.size.height * self.titleAreaSizeRate
+        
+        let cupWidth = proxy.size.width - handleSize * 2 - self.cupLineWidth
+        let cupHeight = proxy.size.height - steamHeight - coasterHeight - titleAreaHeight - self.cupLineWidth
+        
+        let contentTotalWidth = cupWidth - self.cupLineWidth
+        let contentTotalHeight = cupHeight - self.cupLineWidth
+        
+        return VStack {
+            VStack(spacing: 0) {
+                //=========================
+                // Steam (Temp)
+                //=========================
+                Steam()
+                    .fill(Color.red)
+                    .frame(width: steamWidth, height: steamHeight)
+                
                 //=========================
                 // HStack (Cup + Handle)
                 //=========================
                 HStack(alignment: .top, spacing: 0) {
+                    //====================
+                    // Left Space
+                    //====================
+                    Handle()
+                        .fill(Color.clear)
+                        .frame(width: handleSize, height: handleSize)
+                    
                     ZStack {
                         //===========================
                         // VStack (Contents)
@@ -111,24 +228,29 @@ struct CoffeeDiagramView: View {
                         VStack(spacing: 0) {
                             ForEach(0 ..< self.contents.count) { i in
                                 ZStack {
-                                    Content()
+                                    Rect()
                                         .fill(self.contents[i].ingredient.color)
                                     
                                     Text(self.contents[i].ingredient.name)
                                         .padding(EdgeInsets(top: 0,
-                                                            leading: self.cupLineWidth / 2,
+                                                            leading: self.cupLineWidth,
                                                             bottom: 0,
-                                                            trailing: self.cupLineWidth / 2))
+                                                            trailing: self.cupLineWidth))
                                         .lineLimit(1)
-                                        .font(.system(size: 10))
+                                        .font(.system(size: 8))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(self.labelColor)
                                 }
-                                .frame(width: geometry.size.width, height: geometry.size.height * self.contents[i].percent)
+                                .frame(width: contentTotalWidth, height: contentTotalHeight * self.contents[i].percent)
+                                .scaleEffect(x: 1.0, y: self.animationFinished ? 1.0 : 0, anchor: .bottom)
+                                .animation(self.contentAnimation(dealy: Double(self.contents.count - i)))
                             }
+                            
+                            //Bottom Margin
+                            Rect()
+                                .frame(width: contentTotalWidth, height: self.cupLineWidth / 2)
                         }
-                        .frame(width: geometry.size.width - geometry.size.height * self.handleSizeRate,
-                               height: geometry.size.height  - self.cupLineWidth, alignment: .bottom)
+                        .frame(width: cupWidth, height: cupHeight, alignment: .bottom)
                         .mask(Cup())
                         
                         //====================
@@ -136,8 +258,7 @@ struct CoffeeDiagramView: View {
                         //====================
                         Cup()
                             .stroke(self.cupColor, lineWidth: self.cupLineWidth)
-                            .frame(width: geometry.size.width - geometry.size.height * self.handleSizeRate,
-                                   height: geometry.size.height - self.cupLineWidth)
+                            .frame(width: cupWidth - self.cupLineWidth, height: cupHeight)
                     }
                     
                     //====================
@@ -145,15 +266,31 @@ struct CoffeeDiagramView: View {
                     //====================
                     Handle()
                         .stroke(self.cupColor, lineWidth: self.cupLineWidth)
-                        .frame(width: geometry.size.height * self.handleSizeRate, height: geometry.size.height * self.handleSizeRate - self.cupLineWidth)
+                        .frame(width: handleSize, height: handleSize)
                 }
-                .padding(EdgeInsets(top: 0,
-                                    leading: geometry.size.width * (self.safeHorizontalPaddingRate),
-                                    bottom: 0,
-                                    trailing: geometry.size.width * self.safeHorizontalPaddingRate))
+                
+                //Bottom Margin
+                Rect()
+                    .fill(Color.clear)
+                    .frame(width: cupWidth, height: self.cupLineWidth / 2)
+                
+                //=========================
+                // Coaster
+                //=========================
+                Coaster()
+                    .fill(self.cupColor)
+                    .frame(width: coasterWidth, height: coasterHeight)
+                
+                //=========================
+                // Title Area
+                //=========================
+                Text(self.title)
+                    .frame(width: titleAreaWidth, height: titleAreaHeight)
+                    .font(.system(size: 15))
             }
         }
     }
+    // swiftlint:enable function_body_length
 }
 
 //====================
@@ -227,6 +364,6 @@ var cafeAuLaitContent: [CoffeeContent] = [
 
 struct CoffeeDiagramView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeDiagramView(contents: americanoContent)
+        CoffeeDiagramView(title: "Americano", contents: americanoContent)
     }
 }
