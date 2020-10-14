@@ -22,6 +22,9 @@
 		158467B1235A99AC00D0DAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B0235A99AC00D0DAF6 /* Assets.xcassets */; };
 		158467B4235A99AC00D0DAF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158467B3235A99AC00D0DAF6 /* Preview Assets.xcassets */; };
 		158467C2235A99AC00D0DAF6 /* CoffeeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */; };
+		2C429B7523E7EB4B0013394B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C429B7423E7EB4B0013394B /* ImageView.swift */; };
+		2C429B7723E7EBE60013394B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C429B7623E7EBE60013394B /* ImageLoader.swift */; };
+		2C6BFBD523ADA26E0025DC5D /* CoffeeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BFBD423ADA26E0025DC5D /* CoffeeStepView.swift */; };
 		2CD8356E2388B63A003B9F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD835702388B63A003B9F6F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		158467BD235A99AC00D0DAF6 /* CoffeeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		158467C1235A99AC00D0DAF6 /* CoffeeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeKitTests.swift; sourceTree = "<group>"; };
 		158467C3235A99AC00D0DAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C429B7423E7EB4B0013394B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		2C429B7623E7EBE60013394B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2C6BFBD423ADA26E0025DC5D /* CoffeeStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeStepView.swift; sourceTree = "<group>"; };
 		2CD8356F2388B63A003B9F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CD835712388B641003B9F6F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,8 +87,10 @@
 		035B074E237F8F0F004287DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C6BFBD423ADA26E0025DC5D /* CoffeeStepView.swift */,
 				158467AE235A99A800D0DAF6 /* ContentView.swift */,
 				035B0755237F904F004287DB /* CoffeeCell.swift */,
+				2C429B7423E7EB4B0013394B /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				035B075D237F9640004287DB /* LocalDataService.swift */,
+				2C429B7623E7EBE60013394B /* ImageLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -302,9 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C429B7723E7EBE60013394B /* ImageLoader.swift in Sources */,
 				158467AB235A99A800D0DAF6 /* AppDelegate.swift in Sources */,
 				158467AD235A99A800D0DAF6 /* SceneDelegate.swift in Sources */,
+				2C6BFBD523ADA26E0025DC5D /* CoffeeStepView.swift in Sources */,
 				0318D9CA239B46F100643730 /* Ingredient.swift in Sources */,
+				2C429B7523E7EB4B0013394B /* ImageView.swift in Sources */,
 				0318D9CE239B4BC500643730 /* PreparationStep.swift in Sources */,
 				0318D9C8239B431000643730 /* Grind.swift in Sources */,
 				0318D9CC239B4A3900643730 /* Equipment.swift in Sources */,
