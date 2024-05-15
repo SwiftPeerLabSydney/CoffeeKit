@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
 
+        // read data about known coffees from somewhere - for now, built-in service which reads app-bundle json, later update for remote server data
         guard let coffees = LocalDataService.data() else {
             return
         }

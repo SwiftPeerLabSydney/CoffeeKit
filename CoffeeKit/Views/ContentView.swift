@@ -15,7 +15,9 @@ struct ContentView: View {
         TabView {
             List {
                 ForEach(coffees, id: \.self ) { coffee in
+//                  NavigationLink(destination: CoffeeStepView) {
                     CoffeeCell(coffee: coffee)
+//                  }
                 }
             }
             .tabItem {
@@ -30,3 +32,14 @@ struct ContentView: View {
         }
     }
 }
+
+#if DEBUG
+struct CoffeeMainView_Previews: PreviewProvider {
+  // test coffee from model Coffee.swift
+  static var previews: some View {
+    ContentView(coffees: [])
+    // set the local language, ISO 639-1 codes. "ko" == korean
+    .environment(\.locale, .init(identifier: "ko"))
+  }
+}
+#endif
